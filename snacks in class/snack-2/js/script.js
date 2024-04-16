@@ -28,8 +28,15 @@ const personArray = [
 
 let finalArray = [];
 
- finalArray = personArray.map((curPerson) => {
+finalArray = personArray.map((curPerson) => {
 
-    return {...personArray}
+    if (curPerson.eta >= 18 && curPerson.eta <= 70) {
+        return `${curPerson.nome} ${curPerson.cognome} può guidare`
+    }
+    else {
+        return `${curPerson.nome} ${curPerson.cognome} non può guidare`
+    }
 
 })
+
+console.log(finalArray);
