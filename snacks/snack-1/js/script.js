@@ -25,17 +25,19 @@ const arrayBicicle = [
 
 
 let minorBicicle = arrayBicicle[0].peso;
-console.log(minorBicicle);
 
+let bicicleCur
 
 arrayBicicle.forEach((curBicicle) => {
 
-    console.log(curBicicle, minorBicicle);
-
     if (curBicicle.peso < minorBicicle) {
         minorBicicle = curBicicle.peso;
+
+        bicicleCur = ` ${curBicicle.nome} ${curBicicle.peso}`
     }
+
+    return bicicleCur
 
 });
 
-console.log(minorBicicle);
+console.log(bicicleCur);
